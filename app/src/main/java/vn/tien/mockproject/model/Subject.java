@@ -1,20 +1,26 @@
 package vn.tien.mockproject.model;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
+import java.util.UUID;
+
+@Entity(tableName = "subject")
 public class Subject {
-    private int mId;
+    @NonNull
+    @PrimaryKey
+    @ColumnInfo(name = "subjectName")
     private String mName;
 
-    public Subject(int id, String name) {
-        mId = id;
+
+    public Subject(String name) {
         mName = name;
     }
 
-    public int getId() {
-        return mId;
-    }
-
-    public void setId(int id) {
-        mId = id;
+    public Subject() {
     }
 
     public String getName() {
