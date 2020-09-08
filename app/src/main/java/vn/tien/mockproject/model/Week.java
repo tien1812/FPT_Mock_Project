@@ -1,70 +1,41 @@
 package vn.tien.mockproject.model;
 
+import java.util.Date;
+import java.util.List;
+
 public class Week {
-    private Day mMonday;
-    private Day mTuesday;
-    private Day mWednesday;
-    private Day mThursday;
-    private Day mFriday;
-    private Day mSaturday;
+    private Date mStartDate;
+    private Date mEndDate;
+    private List<LessonSchedule> mLessonSchedules;
 
-    public Week(Day monday, Day tuesday, Day wednesday, Day thursday, Day friday, Day saturday) {
-        mMonday = monday;
-        mTuesday = tuesday;
-        mWednesday = wednesday;
-        mThursday = thursday;
-        mFriday = friday;
-        mSaturday = saturday;
+    public Week(Date startDate, Date endDate, List<LessonSchedule> lessonSchedules) {
+        mStartDate = startDate;
+        mEndDate = endDate;
+        mLessonSchedules = lessonSchedules;
     }
 
-    public Week() {
+    public Date getStartDate() {
+        return mStartDate;
     }
 
-    public Day getMonday() {
-        return mMonday;
+    public void setStartDate(Date startDate) {
+        mStartDate = startDate;
     }
 
-    public void setMonday(Day monday) {
-        mMonday = monday;
+    public Date getEndDate() {
+        return mEndDate;
     }
 
-    public Day getTuesday() {
-        return mTuesday;
+    public void setEndDate(Date endDate) {
+        mEndDate = endDate;
     }
 
-    public void setTuesday(Day tuesday) {
-        mTuesday = tuesday;
+    public List<LessonSchedule> getLessonSchedules() {
+        return mLessonSchedules;
     }
 
-    public Day getWednesday() {
-        return mWednesday;
+    public void setLessonSchedules(List<LessonSchedule> lessonSchedules) {
+        mLessonSchedules = lessonSchedules;
     }
 
-    public void setWednesday(Day wednesday) {
-        mWednesday = wednesday;
-    }
-
-    public Day getThursday() {
-        return mThursday;
-    }
-
-    public void setThursday(Day thursday) {
-        mThursday = thursday;
-    }
-
-    public Day getFriday() {
-        return mFriday;
-    }
-
-    public void setFriday(Day friday) {
-        mFriday = friday;
-    }
-
-    public Day getSaturday() {
-        return mSaturday;
-    }
-
-    public void setSaturday(Day saturday) {
-        mSaturday = saturday;
-    }
 }

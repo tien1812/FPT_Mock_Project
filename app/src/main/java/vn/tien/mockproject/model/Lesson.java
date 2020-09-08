@@ -3,24 +3,21 @@ package vn.tien.mockproject.model;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
-import java.util.UUID;
-
-@Entity(tableName = "subject")
-public class Subject {
+@Entity(tableName = "lession")
+public class Lesson {
     @NonNull
     @PrimaryKey
-    @ColumnInfo(name = "subjectName")
+    @ColumnInfo(name = "lessionName")
     private String mName;
 
 
-    public Subject(String name) {
+    public Lesson(String name) {
         mName = name;
     }
 
-    public Subject() {
+    public Lesson() {
     }
 
     public String getName() {
